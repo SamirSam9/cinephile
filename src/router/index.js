@@ -1,37 +1,39 @@
 import { createRouter, createWebHistory } from 'vue-router'
+import Home from '@/views/HomePage.vue'
 
-import HomePage from '@/views/HomePage.vue'
 function load(component) {
-  return () => import(`../views/HomePage${component}.vue`) 
+  return () => import(`@/views/${component}.vue`)
 }
+
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
       path: '/',
       name: 'home',
-      component: () => import('../views/HomePage.vue')
+      component: Home
     },
     {
       path: '/movie',
-      name: 'Movie',
-      component: load('MoviesPage'),
-    },
-    {
-      path: '/tv',
-      name: 'Tv',
-      component: load('TvsPage'),
+      name: 'movies',
+      component: load('MoviesPage')
     },
     {
       path: '/search',
-      name: 'Search',
-      component: load('SearchPage'),
+      name: 'search',
+      component: load('SearchPage')
+    },
+    {
+      path: '/tv',
+      name: 'tv',
+      component: load('TvPage')
     },
     {
       path: '/:catchAll(.*)*',
-      name: 'Not Found',
-      component: load('404 Not Found'),
+      name: 'notfount',
+      component: load('404')
     },
+
   ]
 })
 

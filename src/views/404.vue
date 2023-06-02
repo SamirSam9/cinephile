@@ -1,6 +1,6 @@
 <template>
     <div>
-        404 Not Found
+        404
     </div>
 </template>
 
@@ -8,6 +8,4 @@
 
 </script>
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>

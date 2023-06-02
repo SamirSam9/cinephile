@@ -1,6 +1,6 @@
 <template>
     <div>
-search
+        search
     </div>
 </template>
 
@@ -8,6 +8,4 @@ search
 
 </script>
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>
