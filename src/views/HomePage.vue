@@ -1,6 +1,6 @@
 <template>
-    <div>
-        Home
+    <div class="main">
+       <Upcoming />
     </div>
 </template>
 
